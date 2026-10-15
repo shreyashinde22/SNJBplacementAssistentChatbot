@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="SNJB's Late Sau. Kantabai Bhavarlalji Jain College of Engineering T&P Cell AI Assistant for Campus Recruitment, Eligibility, CV & Interview Preparation.">
+    <title>SNJB Placement Cell Assistant — Campus Recruitment AI</title>
+    
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="app-container">
+        
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="college-badge">
+                    <span class="badge-icon">🏛️</span>
+                    <div class="badge-text">
+                        <span class="college-short">SNJB COE</span>
+                        <span class="college-location">Chandwad, Nashik</span>
+                    </div>
+                </div>
+                <h1 class="app-title">Placement Assistant</h1>
+                <p class="app-subtitle">Training & Placement Cell</p>
+            </div>
+
+            <!-- New Chat Action -->
+            <button class="btn btn-primary btn-new-chat" id="newChatBtn" aria-label="Start new chat session">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
+                <span>New Conversation</span>
+            </button>
+
+            <!-- Status Indicator Card -->
+            <div class="status-card" id="statusCard">
+                <div class="status-header">
+                    <span class="status-dot" id="statusDot"></span>
+                    <span class="status-title" id="statusTitle">Checking System...</span>
+                </div>
+                <p class="status-detail" id="statusDetail">Loading configuration...</p>
+                <div class="status-actions">
+                    <button class="btn-text" id="testApiBtn">Test Gemini Connection</button>
+                    <button class="btn-text" id="openUploadModalBtn">Upload Document</button>
+                </div>
+            </div>
+
+            <!-- Navigation Sections -->
+            <nav class="sidebar-nav">
+                <div class="nav-group">
+                    <div class="nav-group-title">Quick FAQ Topics</div>
+                    <button class="nav-item faq-chip" data-query="How does campus placement work at SNJB?">
+                        <span>📋</span> Placement Process
+                    </button>
+                    <button class="nav-item faq-chip" data-query="What are the general eligibility criteria for placement drives?">
+                        <span>🎓</span> Eligibility & Criteria
+                    </button>
+                    <button class="nav-item faq-chip" data-query="What documents should I prepare for campus placement interviews?">
+                        <span>📁</span> Document Checklist
+                    </button>
+                    <button class="nav-item faq-chip" data-query="How can I prepare for aptitude tests, coding rounds, and technical interviews?">
+                        <span>💡</span> Preparation Roadmap
+                    </button>
+                    <button class="nav-item faq-chip" data-query="How do I register for an upcoming placement drive?">
+                        <span>📝</span> Registration Procedure
+                    </button>
+                </div>
+
+                <div class="nav-group">
+                    <div class="nav-group-title">Career Toolkit</div>
+                    <button class="nav-item faq-chip" data-query="Give me resume guidelines for computer engineering placement.">
+                        <span>📄</span> Resume & CV Format
+                    </button>
+                    <button class="nav-item faq-chip" data-query="What topics are asked in technical interviews for software roles?">
+                        <span>💻</span> Technical Interview Topics
+                    </button>
+                    <button class="nav-item faq-chip" data-query="How to clear HR interview rounds with STAR method?">
+                        <span>🗣️</span> HR Interview Tips
+                    </button>
+                </div>
+            </nav>
+
+            <!-- Sidebar Footer -->
+            <div class="sidebar-footer">
+                <p><strong>SNJB's Late Sau. K. B. Jain College of Engineering</strong></p>
+                <p>Chandwad, Dist: Nashik, Maharashtra 423101</p>
+                <a href="https://www.snjb.org/" target="_blank" rel="noopener">www.snjb.org</a>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="main-content">
+            
+            <!-- Top Bar Header -->
+            <header class="top-bar">
+                <button class="mobile-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                </button>
+                <div class="top-title">
+                    <h2>SNJB Placement Cell Assistant</h2>
+                    <span class="model-badge" id="modelBadge">Gemini 2.5 Flash</span>
+                </div>
+                <div class="top-actions">
+                    <button class="btn-icon" id="themeToggleBtn" title="Toggle Light/Dark Theme" aria-label="Toggle theme">
+                        <span id="themeIcon">🌙</span>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Chat Window -->
+            <div class="chat-container" id="chatContainer">
+                
+                <!-- Welcome View -->
+                <div class="welcome-card" id="welcomeCard">
+                    <div class="welcome-icon">🎓</div>
+                    <h2>Welcome to SNJB Placement Cell Assistant</h2>
+                    <p>Your AI companion for campus recruitment, eligibility criteria, interview preparation, and placement policies at SNJB COE, Chandwad.</p>
+                    
+                    <div class="notice-banner">
+                        <span class="notice-icon">ℹ️</span>
+                        <span>Official placement schedules, company criteria, and deadlines must be confirmed through official SNJB T&P circulars.</span>
+                    </div>
+
+                    <div class="suggested-grid">
+                        <div class="suggestion-card" data-query="How does campus placement work at SNJB College of Engineering?">
+                            <div class="card-icon">🏢</div>
+                            <h3>Placement Process</h3>
+                            <p>Learn about registration, PPTs, screening tests, and interview rounds.</p>
+                        </div>
+                        <div class="suggestion-card" data-query="What documents should I prepare for campus placement interviews?">
+                            <div class="card-icon">📂</div>
+                            <h3>Document Folder</h3>
+                            <p>Checklist for resumes, marksheets, certificates, and ID proofs.</p>
+                        </div>
+                        <div class="suggestion-card" data-query="How can I prepare for aptitude tests, coding rounds, and technical interviews?">
+                            <div class="card-icon">⚡</div>
+                            <h3>Recruitment Prep</h3>
+                            <p>Aptitude practice, DSA roadmaps, DBMS, OOP, and coding tips.</p>
+                        </div>
+                        <div class="suggestion-card" data-query="What is the SNJB One Student One Offer placement policy?">
+                            <div class="card-icon">📜</div>
+                            <h3>Placement Policy</h3>
+                            <p>Rules regarding job offers, attendance, and dream offers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages Log -->
+                <div class="messages-log" id="messagesLog"></div>
+
+                <!-- Loading Typing Indicator -->
+                <div class="typing-indicator" id="typingIndicator" style="display: none;">
+                    <div class="assistant-avatar">🤖</div>
+                    <div class="typing-dots">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <span class="typing-text">SNJB AI is retrieving verified info...</span>
+                </div>
+            </div>
+
+            <!-- Input Bar Footer -->
+            <div class="input-container">
+                <form id="chatForm" class="chat-form">
+                    <textarea 
+                        id="userMessage" 
+                        class="chat-input" 
+                        placeholder="Ask about placement drives, eligibility, resume tips, or interview prep..." 
+                        rows="1" 
+                        maxlength="2000"
+                        required
+                        aria-label="Type your message"
+                    ></textarea>
+                    <button type="submit" class="btn-send" id="sendBtn" title="Send message" aria-label="Send message">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                    </button>
+                </form>
+                <div class="input-footer">
+                    <span class="char-count" id="charCount">0/2000</span>
+                    <span class="disclaimer">SNJB Placement Assistant • Verify official notices with T&P Office</span>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- API Test Modal -->
+    <div class="modal-overlay" id="apiTestModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Gemini API Connection Test</h3>
+                <button class="modal-close" id="closeApiModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Testing communication with Google Gemini API using configured <code>GEMINI_MODEL</code>...</p>
+                <div class="test-result-box" id="testResultBox">Click "Run Test" to verify your connection.</div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="closeApiModalBtn2">Close</button>
+                <button class="btn btn-primary" id="runApiTestBtn">Run Live Test</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Document Upload Modal -->
+    <div class="modal-overlay" id="uploadModal">
+        <div class="modal-card">
+            <div class="modal-header">
+                <h3>Upload Verified Placement Document</h3>
+                <button class="modal-close" id="closeUploadModalBtn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>T&P staff can upload official drive circulars or policy documents (<code>.txt</code>, <code>.pdf</code>, <code>.md</code>) to expand the assistant's knowledge base.</p>
+                <form id="uploadForm">
+                    <input type="file" id="docFileInput" accept=".txt,.pdf,.md" required class="file-input">
+                    <div class="upload-status" id="uploadStatusBox"></div>
+                    <button type="submit" class="btn btn-primary mt-3" id="uploadSubmitBtn">Upload & Index</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JS -->
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "faq-001",
+    "category": "Placement Process",
+    "question": "How does campus placement work at SNJB College of Engineering?",
+    "answer": "Campus placement at SNJB College of Engineering generally involves student registration with the Training & Placement (T&P) Cell, pre-placement talks (PPT) by visiting recruiters, resume screening/shortlisting, written or online aptitude & technical tests, group discussions (GD), technical interviews, and HR interviews. Specific company schedules and rules are published via official T&P cell notices.",
+    "is_verified": true,
+    "source": "SNJB T&P Standard Campus Recruitment Guidelines"
+  },
+  {
+    "id": "faq-002",
+    "category": "Eligibility Criteria",
+    "question": "What are the general eligibility criteria for placement drives?",
+    "answer": "Standard recruiter eligibility criteria typically specify minimum academic percentages or CGPA (often 60% or 6.0+ CGPA without active backlogs), branch restrictions (e.g. Computer, Mechanical, Civil, E&TC, AI&DS), and maximum allowed gap years (usually 1 year). However, each company defines its own specific criteria per drive. Check official T&P notices for exact drive-specific eligibility.",
+    "is_verified": true,
+    "source": "SNJB Placement Policy & Recruiter Criteria Guidelines"
+  },
+  {
+    "id": "faq-003",
+    "category": "Registration",
+    "question": "How can I register for an upcoming placement drive?",
+    "answer": "Students must register through the official T&P Cell portal or designated registration forms (e.g. Google Forms or ERP links shared by the T&P Officer) before the announced deadline. Late registrations are strictly not accepted. Ensure your academic records and resume details in the placement portal are up to date.",
+    "is_verified": true,
+    "source": "SNJB T&P Registration Protocol"
+  },
+  {
+    "id": "faq-004",
+    "category": "Documents",
+    "question": "What documents should I prepare for campus placement interviews?",
+    "answer": "Prepare a updated Placement Folder containing:\n1. 3-4 printed copies of your ATS-friendly CV/Resume.\n2. Original & photocopies of marksheets (10th, 12th/Diploma, and all Engineering semesters).\n3. College ID card & Government ID (Aadhaar/PAN/Passport).\n4. Recent passport-size photographs (at least 4 copies).\n5. Project reports, internship certificates, and extra-curricular credentials.",
+    "is_verified": true,
+    "source": "SNJB Placement Candidate Checklist"
+  },
+  {
+    "id": "faq-005",
+    "category": "Pre-Placement Talks",
+    "question": "What happens during pre-placement talks (PPT)?",
+    "answer": "Pre-placement talks are presentations given by recruiters to introduce their company background, work culture, job roles, tentative salary packages, training bonds, and selection process. Attending PPTs is mandatory for registered candidates as it helps in facing HR and technical rounds.",
+    "is_verified": true,
+    "source": "SNJB Campus Drive Standard Operating Procedure"
+  },
+  {
+    "id": "faq-006",
+    "category": "Preparation",
+    "question": "How can I prepare for aptitude tests, coding rounds, and technical interviews?",
+    "answer": "1. **Aptitude Tests**: Practice Quantitative Aptitude, Logical Reasoning, and Verbal Ability on platforms like IndiaBIX, GeeksforGeeks, or PrepInsta.\n2. **Coding Rounds**: Focus on Data Structures & Algorithms (Arrays, Strings, Trees, Dynamic Programming) in C++, Java, or Python on LeetCode/HackerRank.\n3. **Technical Interview**: Thoroughly revise core Computer Engineering subjects (DBMS, OOP, OS, Computer Networks) and be ready to explain your final year and mini projects in detail.\n4. **Mock Interviews**: Participate in mock interview sessions organized by SNJB T&P Cell.",
+    "is_verified": true,
+    "source": "SNJB Student Placement Preparation Handbook"
+  },
+  {
+    "id": "faq-007",
+    "category": "Notices",
+    "question": "Where can I find official placement notices and schedule updates?",
+    "answer": "Official placement announcements, drive dates, shortlisted student lists, and urgent updates are communicated via:\n- The SNJB Official T&P WhatsApp / Telegram announcement channels.\n- Departmental T&P notice boards and student email broadcasts.\n- SNJB College official website: https://www.snjb.org/",
+    "is_verified": true,
+    "source": "SNJB Official Communication Channels Policy"
+  },
+  {
+    "id": "faq-008",
+    "category": "Company Criteria",
+    "question": "What are the specific eligibility requirements for TCS, Infosys, or Wipro campus drives?",
+    "answer": "Company-specific criteria vary every academic year depending on company policy. Answers regarding specific recruiter criteria are generated ONLY when verified recruitment notices or PDFs are uploaded by the SNJB T&P cell. For upcoming company drives, please consult the latest drive notice published by your T&P Coordinator.",
+    "is_verified": false,
+    "source": "Illustrative Example — Requires verification per drive"
+  }
+]

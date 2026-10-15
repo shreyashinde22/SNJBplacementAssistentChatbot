@@ -1,0 +1,24 @@
+====================================================================
+SNJB COLLEGE OF ENGINEERING - CAREER & RECRUITMENT GUIDELINES
+RESUME BUILDING & TECHNICAL INTERVIEW PREPARATION GUIDE
+====================================================================
+
+1. RESUME FORMAT & CONTENT STANDARDS
+- Use a single-page, single-column ATS (Applicant Tracking System) friendly format.
+- Structure sections clearly: Contact Info -> Objective/Summary -> Education (Include SNJB COE details with CGPA) -> Technical Skills -> Projects -> Internships/Certifications -> Achievements.
+- Use action verbs (e.g. "Developed", "Implemented", "Designed", "Optimized") for project descriptions.
+- Highlight final year engineering projects and mini projects with clear technologies used (e.g. Python, Flask, React, MySQL, Machine Learning).
+
+2. TECHNICAL INTERVIEW ROADMAP (COMPUTER / AI&DS / IT)
+- Data Structures: Master Arrays, Linked Lists, Stacks, Queues, Binary Trees, Graph Traversal (BFS/DFS), and Sorting/Searching algorithms.
+- Core Fundamentals:
+  * Database Management Systems (DBMS): SQL queries, Normalization, ACID properties, Indexing, Joins.
+  * Object-Oriented Programming (OOP): Encapsulation, Inheritance, Polymorphism, Abstraction with code examples.
+  * Operating Systems (OS): Process vs Thread, Deadlocks, Paging, Virtual Memory.
+  * Computer Networks: OSI model layers, TCP vs UDP, HTTP/HTTPS, IP addressing.
+- Be prepared to write code on paper or whiteboard during physical campus drives.
+
+3. HR & BEHAVIORAL INTERVIEW GUIDELINES
+- Practice the standard "Tell me about yourself" pitch in 90 seconds, emphasizing academic background, key skills, and passion for engineering.
+- Use the STAR technique (Situation, Task, Action, Result) when asked about challenges, project work, or team achievements.
+- Prepare thoughtful questions to ask the interviewer regarding tech stacks, team culture, or entry-level training programs.
